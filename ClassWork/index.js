@@ -1,0 +1,331 @@
+
+// task 1
+
+/*
+
+function ReplaceString (Str) {
+
+    let start = Str[0].toUpperCase();
+
+    let end = Str.slice(1).toLowerCase();
+
+
+    return start + end;
+}
+
+console.log(ReplaceString("jAVASCRIPT"));
+
+*/
+
+// task 2
+
+/*
+
+function GetInitials (Str) {
+
+   let start_word = Str[0].charAt().toUpperCase();
+
+   let last_word = Str.split(" ")[1].at(0).toUpperCase();
+
+    return `${start_word}.${last_word}`;
+}
+
+console.log(GetInitials("erik manukyan"));
+
+*/
+
+ // task 3
+
+/*
+
+function GetLastChar (Str) {
+
+    let last_Char = Str.at(-1);
+
+    return last_Char;
+
+}
+
+console.log(GetLastChar("Node"));
+
+*/
+
+ // task 4 
+
+ /*
+
+function MakeSlug( title ) {
+
+    let make_slug = title.trim();
+
+    return make_slug.toLowerCase();
+
+}
+
+console.log(MakeSlug("   Foo   "));
+
+*/
+
+
+// task 5
+
+/*
+
+function GetUserName ( email ) {
+
+    let get_user_name = email.indexOf('@');
+
+     return email.slice(0 , get_user_name);
+
+}
+
+function GetDomain ( email )  {
+
+    let get_Domain = email.indexOf('@');
+    
+    return email.slice(get_Domain);
+
+}
+
+console.log(GetUserName("Erik@gmail.com"));
+
+console.log(GetDomain("Erik@gmail.com"));
+
+*/
+
+ // task 6
+
+/*
+
+function GetExtensions (Str) {
+
+    let Extensions = Str.lastIndexOf(".");
+
+     
+    return Str.slice(Extensions);
+
+}
+
+console.log(GetExtensions("photo.final.png"))
+
+*/
+
+ // task 7
+
+ /*
+
+function isImage (FileName) {
+
+   const name = FileName.toLowerCase();
+
+   return name.endsWith(".png") || name.endsWith(".jpg");
+   
+}
+
+console.log(isImage("CATS.jpg")) ;
+
+*/
+
+// task 8 
+
+/*
+
+function maskCard( cardNumber ) {
+
+    return cardNumber.slice(-4).padStart(cardNumber.length, "*");
+
+}
+
+console.log (maskCard("1234567890")) ;
+
+*/
+
+ // task 9'
+
+/*
+
+function truncate ( text , maxLength ) {
+
+    return text.length > maxLength ? text.slice(0 , maxLength) + "..." : text ;
+
+}
+console.log(truncate("Hello Javascript" , 5 ));
+
+*/
+
+// task 10
+
+/*
+
+function countChar (text , char) {
+
+  return text.split(char).length - 1 ;
+
+}
+
+console.log(countChar("Hello" , "H"))
+
+*/
+
+// task 11
+
+/*
+
+function censor ( text , word ) {
+
+    const stars = "*".repeat(word.length);
+
+    return text.replaceAll(word , stars);
+
+}
+
+console.log(censor("bad day, bad mood" , "bad"));
+
+*/
+
+// task 12 
+
+/*
+
+function formatTime (hours , minutes) {
+
+    const FormatedHours = String(hours).padStart(2, "0");
+
+    const formatedMinutes = String(minutes).padStart(2 , "0");
+
+    return `${FormatedHours}:${formatedMinutes}`;
+
+}
+
+console.log(formatTime( 9 , 5 )) ;
+
+*/
+
+// task 13
+
+/*
+
+function sameText (a , b) {
+
+    if (a.trim().toLowerCase() === b.trim().toLowerCase() ) {
+
+        return true ;
+
+    } else {
+
+        return false ;
+
+    }
+
+}
+
+console.log(sameText(" Yerevan" , "YEREVAN" ));
+
+*/
+
+ //task 14
+
+/*
+
+function charCodeInfo (char) {
+
+    let char_decimal = char.charCodeAt();
+    
+     return char_decimal ;
+
+}
+
+console.log(charCodeInfo("A"));
+
+*/
+
+ // Homework Number
+
+ // task 1
+
+ /*
+
+function  compare (value) {
+
+    return `isFinite: ${isFinite(value)} | Number.isFinite ${Number.isFinite(value)}`
+     
+}
+
+console.log("15 Number -> " , compare(15));
+// isFinite: true | Number.isFinite: true
+// erkusnel tesnumen verjavor tiv
+
+console.log(' "15"  String ->', compare("15"));
+// isFinite: true | Number.isFinite: false
+// inFinite tox@ avtomat darznum e tiv (15)
+
+console.log(' null ->', compare(null));
+// isFinite: true | Number.isFinite: false
+// isFinite() null-@ veracum e 0 tvi Number.isFinite() tesnum e vor null-@ tvayin tip che veradarznume false
+
+console.log(' true ->', compare(true));
+// isFinite: true | Number.isFinite: false
+// Boolean true-n tvi veracelis darnume 1  Global@ talise true, Number-in@ false
+
+*/
+
+ // task 2
+
+ /*
+
+function compareNaN (value) {
+
+   return `isNaN : ${isNaN(value)} VS Number.isNaN ${Number.isNaN(value)}` ;
+
+}
+console.log(compareNaN("hello"));
+// isNaN : true VS Number.isNaN false
+
+*/
+
+// task 3
+
+/*
+
+function isValidAge (value) {
+
+  return Number.isInteger(value) && value >= 0 && value <= 150 ;
+
+}
+
+console.log (isValidAge(22));
+
+*/
+
+ // task 4
+
+ /*
+
+function roundTo (num , digits) {
+
+    const Fixed_Number = num.toFixed(digits);
+
+    return Fixed_Number ; 
+}
+
+console.log(roundTo(3.14159 , 2));
+
+*/
+
+// task 5
+
+// chaskaca
+
+/*
+
+function areEqual (a , b) {
+
+    return a + b === Number.EPSILON;
+
+}
+
+console.log(areEqual(0.1 , 0.2 , 0.3));
+
+*/
+
+
