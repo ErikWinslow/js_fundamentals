@@ -328,4 +328,153 @@ console.log(areEqual(0.1 , 0.2 , 0.3));
 
 */
 
+ // task 6 
 
+/*
+
+function toBinary( number ) {
+
+   let binary = Number.parseInt(number);
+
+   return binary.toString(2);
+
+}
+console.log(toBinary(10));
+
+*/
+
+ // task 7
+
+/*
+
+function hexToDecimal (hex) {
+
+   let hex_decimal = parseInt(hex , 16);
+
+   return hex_decimal ;
+
+}
+console.log(hexToDecimal("ff"))
+
+*/
+
+ // task 8
+
+ /*
+
+function parsePrice ( text ) {
+    
+    let Exchange_str_wallet = parseInt(text , 10);
+
+    return typeof Exchange_str_wallet ;
+
+}
+
+console.log(parsePrice("1500 AMD"));
+
+*/
+
+ // task 10
+
+/*
+
+function celsiusToFarenheit (C) {
+
+    let F = C * 9 / 5 + 32 ;
+
+    return F.toFixed(2) ;
+
+}
+
+console.log(celsiusToFarenheit(36.6))
+
+*/
+
+ // task 11
+
+ /*
+
+function FormatMoney (amount) {
+
+    let change_format = amount.toLocaleString("en-US");
+
+
+    return `"${change_format}"` ;
+
+
+}
+
+console.log(FormatMoney(2500000));
+
+*/
+
+ // task 12
+
+/*
+
+ function SafeDivide (a , b) {
+
+    let result = a / b ;
+
+    return Number.isFinite(result) ? result : "Hnaravor che : " ;
+
+ }
+
+ console.log(SafeDivide(10 , 2));
+
+ */
+
+  // task 13
+
+  /*
+
+  function countDigits ( number ) {
+
+    return Math.abs(number).toString().length;
+
+  }
+  console.log(countDigits(12345));
+
+  */
+
+
+  // task 14
+
+  /*
+
+  function inSafe ( number ) {
+
+    return Number.isSafeInteger(number);
+  }
+
+  console.log(inSafe(9007199254740991));
+
+  */
+
+  // task 15
+
+  /*
+
+ function RandomNum (min , max) {
+
+   return Math.floor( Math.random() * (max - min + 1)) + min ;
+
+
+ }
+ console.log(RandomNum(1 , 10));
+
+ */
+
+ // task 16
+
+ /*
+
+ function isCorrectChange (paid , price , change) {
+
+    return Math.abs((paid - price) - change) < Number.EPSILON ;
+
+ }
+
+ console.log(isCorrectChange(5 , 2.5 , 2));
+
+ */
