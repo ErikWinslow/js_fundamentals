@@ -52,11 +52,11 @@ console.log(GetLastChar("Node"));
 
  // task 4 
 
- /*
+/* 
 
 function MakeSlug( title ) {
 
-    let make_slug = title.trim();
+    let make_slug = title.trim().replaceAll("Foo" , "foo");
 
     return make_slug.toLowerCase();
 
@@ -229,9 +229,11 @@ console.log(sameText(" Yerevan" , "YEREVAN" ));
 
 function charCodeInfo (char) {
 
-    let char_decimal = char.charCodeAt();
+    let char_decimal = char.charCodeAt(0);
+
+    let next_char = String.fromCharCode(char_decimal + 1);
     
-     return char_decimal ;
+     return `${char}-i cod-@ ${char_decimal} e hajord@ ${next_char}` ;
 
 }
 
@@ -299,13 +301,13 @@ console.log (isValidAge(22));
 
  // task 4
 
- /*
+/* 
 
 function roundTo (num , digits) {
 
     const Fixed_Number = num.toFixed(digits);
 
-    return Fixed_Number ; 
+    return Number(Fixed_Number) ; 
 }
 
 console.log(roundTo(3.14159 , 2));
@@ -320,11 +322,11 @@ console.log(roundTo(3.14159 , 2));
 
 function areEqual (a , b) {
 
-    return a + b === Number.EPSILON;
+    return Math.abs(a - b) < Number.EPSILON;
 
 }
 
-console.log(areEqual(0.1 , 0.2 , 0.3));
+console.log(areEqual(0.1 + 0.2 , 0.3));
 
 */
 
@@ -334,12 +336,22 @@ console.log(areEqual(0.1 , 0.2 , 0.3));
 
 function toBinary( number ) {
 
-   let binary = Number.parseInt(number);
+   let binary = number.toString(2);
 
-   return binary.toString(2);
+   return binary;
 
 }
 console.log(toBinary(10));
+
+function fromBinary ( Str ) {
+
+    let binary_str = Number.parseInt(Str , 2);
+
+    return binary_str;
+
+}
+
+console.log(fromBinary("1010"));
 
 */
 
@@ -366,13 +378,29 @@ function parsePrice ( text ) {
     
     let Exchange_str_wallet = parseInt(text , 10);
 
-    return typeof Exchange_str_wallet ;
+    return Number (Exchange_str_wallet) ;
 
 }
 
 console.log(parsePrice("1500 AMD"));
 
 */
+
+ // task 9
+
+/*
+
+ function percent (part , total) {
+
+     let result = (part / total) * 100 ;
+
+     return `"${result.toFixed(1)}"`
+ }
+
+ console.log(percent(1 , 3))
+
+*/
+
 
  // task 10
 
@@ -392,14 +420,14 @@ console.log(celsiusToFarenheit(36.6))
 
  // task 11
 
- /*
+/*
 
 function FormatMoney (amount) {
 
     let change_format = amount.toLocaleString("en-US");
 
 
-    return `"${change_format}"` ;
+    return `"${change_format}֏"` ;
 
 
 }
